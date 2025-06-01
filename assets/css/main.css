@@ -1775,3 +1775,11 @@ section,
   width: 100%;
   height: 100%;
 }
+
+/* Mine */
+
+.dashboard h1{
+  font-weight: bolder;
+  font-family: var(--heading-font);
+  font-size: 3rem;
+}
