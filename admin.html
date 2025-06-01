@@ -1093,44 +1093,6 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script>
-   $(document).ready(function() {
-    // Handle the form submission
-    $("#submit-form").submit((e) => {
-        e.preventDefault(); // Prevent default form submission
-
-        // Show loading text
-        $('.loading').css('display', 'block');
-
-        // Send form data using AJAX
-        $.ajax({
-            url: "https://script.google.com/macros/s/AKfycbyGAZUI_sKcik2OJ_z_JqNmgx7n-li5KCBMfPD_S6f5gh0lfBAEtVuhFW_Ze-LKSLtz2A/exec",
-            data: $("#submit-form").serialize(), // Serialize form data
-            method: "post", // Use POST method
-            success: function(response) {
-                // Hide loading
-                $('.loading').css('display', 'none');
-
-                // Show success message
-                $('.sent-message').css('display', 'block');
-
-                // Optionally, you can reload the page or reset the form
-                // window.location.reload();
-                $("#submit-form")[0].reset(); // Reset form fields
-            },
-            error: function(err) {
-                // Hide loading
-                $('.loading').css('display', 'none');
-
-                // Show error message
-                $('.error-message').css('display', 'block');
-            }
-        });
-    });
-});
-
-</script>
-
 </body>
 
 </html>
